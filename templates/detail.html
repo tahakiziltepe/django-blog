@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+{% load static %}
+
+<html>
+	<head>
+		<title>Taha Kızıltepe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="shortcut icon" type="image/png" href="https://image.flaticon.com/icons/svg/31/31079.svg"/>
+		<link rel="stylesheet" href="{%static 'assets/css/ana.css'%}" />
+		<noscript><link rel="stylesheet" href="{%static 'assets/css/noscript.css'%}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="{%url 'index'%}" class="logo"><strong>Taha</strong> <span>Kızıltepe</span></a>
+						<nav>
+                            <a href="#menu"></a>						
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				
+						
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="{%url 'index'%}">Anasayfa</a></li>
+						<li><a href="{%url 'article:articles'%}">Makaleler</a></li>
+					</ul>
+					<!--
+				{% if request.user.is_authenticated %}
+					<ul class="actions stacked">
+						<li><a href="/articles/dashboard/" class="button primary fit">Kontrol Paneli</a></li>
+						<li><a href="/user/logout/" class="button fit">Çıkış Yap</a></li>
+					</ul>
+				{% else %}
+					<ul class="actions stacked">
+						<li><a href="/user/register/" class="button primary fit">Kayıt Ol</a></li>
+						<li><a href="/user/login/" class="button fit">Giriş Yap</a></li>
+					</ul>
+				{% endif %}
+				-->
+					<!--
+				<ul class="actions stacked">
+					<li><a href="#" class="button primary fit">Get Started</a></li>
+					<li><a href="#" class="button fit">Log In</a></li>
+				</ul>
+				-->
+				</nav>
+
+                    <div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h2>{{article.title}}</h2>
+                                    </header>
+                                    <span class="image main">
+										<img src="{{article.article_image.url}}"/>
+									</span>
+                                    <p>
+                                        {{article.content|safe}}   
+                                    </p><br><br>
+                                    <p>Bu makale, 
+                                        {{article.created_date}} 
+                                        tarihinde 
+                                        {{article.author}} 
+										tarafından oluşturulmuştur. 
+										<a href="{%url 'article:articles'%}" style="margin-left: 15%" class="button">tüm makalelere bak</a>
+									</p>
+                                </div>
+                            </section>
+                        </div>
+
+
+
+
+
+<!-- Footer -->
+ <footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://twitter.com/tahakiziltepe" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://Facebook.com/tahakiziltepee" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://Instagram.com/tahakiziltepe" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/mtahakiziltepe/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+            </ul>
+    </div>
+</footer> 
+
+</div>
+
+<!-- Scripts -->
+<script src="{%static 'assets/js/jquery.min.js'%}"></script>
+<script src="{%static 'assets/js/jquery.scrolly.min.js'%}"></script>
+<script src="{%static 'assets/js/jquery.scrollex.min.js'%}"></script>
+<script src="{%static 'assets/js/browser.min.js'%}"></script>
+<script src="{%static 'assets/js/breakpoints.min.js'%}"></script>
+<script src="{%static 'assets/js/util.js'%}"></script>
+<script src="{%static 'assets/js/main.js'%}"></script>
+
+
+</body>
+</html>
